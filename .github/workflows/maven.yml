@@ -20,5 +20,7 @@ jobs:
         java-version: '17'
         distribution: 'adopt'
         cache: maven
-    - name: Build with Maven
+    - name: Build Maven Project
       run: mvn -B package --file pom.xml clean install
+    - name: Test Maven Project
+      run: mvn test
