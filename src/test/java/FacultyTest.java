@@ -26,6 +26,6 @@ public class FacultyTest {
 
     @Test
     void faculty4() {
-        assertEquals(23, Main.calcFacultyFor(4));
+        assertEquals(24, Main.calcFacultyFor(4));
     }
 }
