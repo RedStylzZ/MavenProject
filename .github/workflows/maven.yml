@@ -21,6 +21,6 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build Maven Project
-      run: mvn -B package --file pom.xml clean install
+      run: mvn -B package --file pom.xml clean install -DskipTests
     - name: Test Maven Project
       run: mvn test
