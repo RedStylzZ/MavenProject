@@ -20,19 +20,12 @@ public class Main {
     }
 
     public static String checkPersonCount(int pCount, String alarmstufe) {
-        int count = 0;
-
-        switch(alarmstufe) {
-            case "rot":
-                count = 0;
-                break;
-            case "gelb":
-                count = 30;
-                break;
-            case "grün":
-                count = 60;
-                break;
-        }
+        int count = switch (alarmstufe) {
+            case "rot" -> 0;
+            case "gelb" -> 30;
+            case "grün" -> 60;
+            default -> 0;
+        };
 
         if (pCount > count) {
             return "Zu viele Personen";
@@ -77,5 +70,6 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("🐢");
+        System.out.println("Turtles");
     }
 }
